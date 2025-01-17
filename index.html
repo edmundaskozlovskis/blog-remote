@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -40,9 +42,47 @@
     </script>
 <body>
     <div w3-include-html="header.html"></div>
+    <div class="container">
+      <div class="w3-content w3-display-container">
+          <div class="mySlides">
+            <div class="mySlides-row">
+              <div class="text-block">
+                <p class="date-time">19 May, 2014</p>
+                <h5><a href="">Mauris sed mauris metus</a></h5>
+                <p>Sed a urna in justo molestie bibendum sed eu dolor. Suspendisse laoreet tristique nunc. Curabitur malesuada scelerisque lorem non rutrum. Aenean lobortis magna non fringilla lobortis. Nam pretium, risus pharetra tempus lobortis, sem nisl commodo arcu, ut vehicula dui mi vel risus. Phasellus a tortor interdum, ullamcorper velit semper, dapibus risus.<br><br>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla eu dapibus elit. Aenean in diam finibus nulla malesuada finibus. Aenean ac ipsum nec tortor porta rutrum vitae scelerisque massa. Suspendisse tincidunt consectetur ex. Maecenas in libero fermentum, vestibulum eros euismod, commodo magna. Etiam in congue ligula, in molestie turpis.</p>
+                <hr>
+                <ul class="text-block-list">
+                  <li>
+                    <a class="text-block-read-more" href="">Read More <i class="fa fa-caret-right"></i></a>
+                  </li>
+                  <li>
+                    <ul class="text-block-share-like">
+                      <li><a href=""><i class="fa fa-share-alt"></i></a></li>
+                      <li><a href=""><i class="fa fa-heart"></i></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="mySlides-image">
+                <img src="img/img_mountains_wide.jpg" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <img class="mySlides" src="img/img_nature_wide.jpg" style="width:100%">
+          <img class="mySlides" src="img/img_snow_wide.jpg" style="width:100%">
+          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+              <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+              <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+              <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+          </div>
+      </div>
+    </div>
     <div w3-include-html="footer.html"></div>
     <script>
         includeHTML();
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

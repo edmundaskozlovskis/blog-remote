@@ -1,9 +1,14 @@
 body {
     margin: 0;
+    background-color: #f4f4f4;
 }
 :root {
     --text-p : #656d78;
+    --dark-silver : #434a54;
     --white : #ffffff;
+    --light-silver : #dddddd;
+    --date-time : #aab2bd;
+    --aqua : #50c1e9;
 }
 
 .container {
@@ -51,4 +56,104 @@ body {
 }
 .head-section {
     position: relative;
+}
+
+/* Header style end */
+
+/* Body style start */
+
+/* Index page style start */
+.mySlides-row {
+    display: flex;
+    border: 1px solid var(--light-silver);
+    border-radius: 3px;
+    background-color: var(--white);
+}
+.text-block,
+.mySlides-image {
+    width: 50%;
+}
+.text-block {
+    padding: 20px;
+}
+.text-block h5 {
+    font-family: "Fjalla One", serif;
+    font-size: 16px;
+    color: var(--dark-silver);
+}
+.text-block h5 a {
+    text-decoration: none;
+}
+.text-block h5 a:hover {
+    color: var(--aqua);
+}
+.text-block p {
+    font-size: 12px;
+    font-family: "Roboto Slab", serif;
+    color: var(--text-p);
+}
+.text-block ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+.text-block .text-block-list {
+    justify-content: space-between;
+}
+.text-block .text-block-share-like {
+    gap: 10px;
+}
+.text-block .text-block-read-more {
+    background-color: #f6f7fb;
+    padding: 5px 11px;
+    border: 1px solid var(--light-silver);
+    display: block;
+    text-decoration: none;
+}
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+}
+.w3-content {
+    max-width: 100%;
+    margin: 70px 0 60px;
+}
+.date-time {
+    font-family: "Roboto Slab", serif;
+    color: var(--date-time);
+    font-size: 12px;
+}
+.w3-display-bottommiddle {
+    bottom: -40px;
+}
+.w3-section {
+    margin: 0;
+}
+
+/* Index page style end */
+
+/* Body style end */
+
+/* Footer style start */
+footer {
+    background-color: var(--dark-silver);
+    min-height: 80px;
+    color: var(--white);
+}
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+}
+.copyright-box, 
+.social-box {
+    margin-top: calc((80px - 50.6px)/2);
+} 
+footer a {
+    color: var(--white);
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
 }
