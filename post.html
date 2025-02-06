@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+<body>
+    <div w3-include-html="header.html"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-1">
+          <article>
+            <img class="head" src="img/blog-post.jpg" alt="Article picture">
+            <div class="content">
+              <p class="time">20 May, 2014</p>
+              <h5>Sed eleifend nisl in pulvinar congue</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, eveniet reprehenderit! Aspernatur nam eum sapiente corrupti fugiat, placeat ad hic nesciunt distinctio. Unde ipsum voluptas, sequi expedita in corporis impedit?
+              Quia sequi nisi commodi quo delectus aliquid molestiae autem odit voluptatibus earum? Praesentium repudiandae debitis voluptates ipsa dicta molestias eius voluptatum adipisci placeat expedita sit officia distinctio, odit deleniti ipsum?</p>
+              <br>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sit harum minus accusantium iure laborum officia dicta illum temporibus, laboriosam dolores repellat dolor voluptate obcaecati architecto culpa maxime delectus sequi?</p>
+              <ul class="list-inline-photo">
+                <li>
+                  <a href="#">
+                    <div class="image"><img src="img/pic-1-small.jpg" alt="Pic 1 image"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="image"><img src="img/pic-2-small.jpg" alt="Pic 2 image"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="image"><img src="img/pic-3-smal.jpg" alt="Pic 3 image"></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="image"><img src="img/pic-4-small.jpg" alt="Pic 4 image"></div>
+                  </a>
+                </li>
+              </ul>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis ipsa, mollitia deserunt quas quia, unde, officia nobis nisi adipisci exercitationem assumenda porro alias repudiandae tempore minus dignissimos iste. Ducimus, voluptas?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto facere aliquid blanditiis incidunt cum nulla fugiat. Veritatis reprehenderit ipsa assumenda? Repellendus excepturi, dolores laboriosam exercitationem mollitia illum adipisci harum fugit!</p>
+              <br>
+              <hr>
+              <ul>
+                <li>
+                  <h3>
+                    <i class="fa fa-tags"></i>
+                    <a href="#">#nature</a>
+                    <a href="#">#landscape</a>
+                    <a href="#">#flowers</a>
+                    <a href="#">#travel</a>
+                    <a href="#">#photography</a>
+                    <a href="#">#forest</a>
+                  </h3>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-share-alt"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-heart"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="col-2">
+          <div class="sidebar">
+            <ul>
+              <li>
+                <p>
+                  <input type="text" placeholder="paieska">
+                </p>
+                <span>
+                  <button type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </li>
+              <li>
+                <h1>Categories</h1>
+                <div class="content">
+                  <ul>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                    <li>
+                      <p><a href="#">Text 120<span>12</span></a></p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <h1>popular posts</h1>
+                <div class="content">
+                  <ul>
+                    <li>
+                      <p><a href="#">Quisque congue vehicula.</a></p>
+                      <p class="time">25 April, 2014</p>
+                    </li>
+                    <li>
+                      <p><a href="#">Quisque congue vehicula.</a></p>
+                      <p class="time">25 April, 2014</p>
+                    </li>
+                    <li>
+                      <p><a href="#">Quisque congue vehicula.</a></p>
+                      <p class="time">25 April, 2014</p>
+                    </li>
+                    <li>
+                      <p><a href="#">Quisque congue vehicula.</a></p>
+                      <p class="time">25 April, 2014</p>
+                    </li>
+                    <li>
+                      <p><a href="#">Quisque congue vehicula.</a></p>
+                      <p class="time">25 April, 2014</p>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div w3-include-html="footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -202,6 +202,60 @@ hr {
 
 /* Index page style end */
 
+/* Single post style start */
+.row {
+    display: flex;
+    gap: 20px;
+}
+.col-1 {
+    flex: 9;
+}
+.col-1 .head {
+    width: 100%;
+}
+.col-1 .content {
+    padding: 42px 70px 3px;
+    border: solid 1px var(--light-silver);
+    background-color: var(--white);
+}
+.col-1 .time {
+    color: var(--date-time);
+    font-size: 12px;
+    font-family: "Roboto Slab", serif;
+    margin: 0;
+}
+.col-1 h5 {
+    font-size: 16px;
+    font-family: "Fjalla One", serif;
+    margin: 3px 0 33px;
+}
+.col-1 p {
+    font-size: 12px;
+    color: var(--text-p);
+    font-family: "Roboto Slab", serif;
+    margin: 0;
+}
+.col-1 .list-inline-photo {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    display: inline-block;
+}
+.col-1 .list-inline-photo li {
+    float: left;
+    margin-right: 6px;
+}
+.col-1 .list-inline-photo li:last-child {
+    margin-right: 0;
+}
+.col-1 .list-inline-photo li a {
+    /* display: block; */
+}
+.col-2 {
+    flex: 3;
+}
+/* Single post style end */
+
 /* Body style end */
 
 /* Footer style start */
