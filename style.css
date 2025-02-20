@@ -242,11 +242,8 @@ hr {
     list-style-type: none;
     margin: 20px 0;
     padding: 0;
-    display: inline-block;
-}
-.col-1 .list-inline-photo li {
-    float: left;
-    margin-right: 6px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 .col-1 .list-inline-photo li:last-child {
     margin-right: 0;
@@ -296,6 +293,86 @@ hr {
 .list-inline-tags ul li:last-child a:hover {
     color: red;
 }
+#comments-list h5 {
+    text-transform: uppercase;
+    color: var(--dark-silver);
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+#comments-list .comment {
+    margin-bottom: 30px;
+}
+#comments-list .replay {
+    margin-left: 100px;
+}
+#comments-list img,
+#leave-comment label {
+    float: left;
+    margin-right: 30px;
+}
+#comments-list .content,
+#leave-comment .content {
+    overflow: hidden;
+    padding: 22px 20px 14px;
+}
+#comments-list ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#comments-list ul li {
+    float: left;
+}
+#comments-list ul li:first-child {
+    margin-right: 8px;
+}
+#comments-list ul li a {
+    font-size: 12px;
+}
+#comments-list .content h4 {
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    padding: 3px 0 11px;
+}
+#comments-list .content p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-silver);
+}
+#leave-comment input[type=file] {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+#leave-comment .photo {
+    width: 70px;
+    border: solid 1px silver;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+#leave-comment .photo i {
+    color: var(--dark-silver);
+}
+#leave-comment .photo:hover {
+    cursor: pointer;
+}
+#leave-comment .photo:hover i {
+    color: var(--text-p);
+}
+#leave-comment input[type=text] {
+    border: dashed 1px var(--text-p);
+    margin: 4px 0 20px;
+    display: block;
+    padding: 0 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    height: 30px;
+}
 /* Single post style end */
 
 /* Sidebar start */
@@ -338,7 +415,8 @@ hr {
 .sidebar .categories-group {
     margin-bottom: 30px;
 }
-.sidebar .categories-group h1 {
+.sidebar .categories-group h1,
+.sidebar .popular-posts-group h1 {
     width: 100%;
     height: 50px;
     background-color: var(--dark-silver);
@@ -352,7 +430,8 @@ hr {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
-.sidebar .categories-group .content {
+.sidebar .categories-group .content,
+.sidebar .popular-posts-group .content {
     border: solid 1px var(--light-silver);
     background-color: var(--white);
     border-bottom-left-radius: 3px;
@@ -375,6 +454,10 @@ hr {
 .sidebar .categories-group .content p a:hover {
     color: var(--aqua);
 }
+.sidebar .categories-group .content p a:hover span {
+    color: var(--white);
+    background-color: var(--aqua);
+}
 .sidebar .categories-group .content p span {
     float: right;
     width: 18px;
@@ -389,6 +472,24 @@ hr {
 .sidebar .categories-group .content p span:hover {
     color: var(--white);
     background-color: var(--aqua);
+}
+.sidebar .popular-posts-group li {
+    padding-bottom: 10px;
+}
+.sidebar .popular-posts-group p {
+    font-size: 13px;
+    font-family: "Roboto Slab", serif;
+    color: var(--text-p);
+    margin: 0;
+}
+.sidebar .popular-posts-group .time {
+    color: var(--date-time);
+}
+.sidebar .popular-posts-group a {
+    text-decoration: none;
+}
+.sidebar .popular-posts-group a:hover {
+    color: var(--aqua);
 }
 /* Sidebar end */
 
