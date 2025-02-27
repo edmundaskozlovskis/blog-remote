@@ -373,7 +373,95 @@ hr {
     border-radius: 3px;
     height: 30px;
 }
+#leave-comment textarea {
+    width: 100%;
+    border: dashed 1px var(--text-p);
+    padding: 4px 20px;
+    border-radius: 3px;
+}
+#leave-comment input[type='submit'] {
+    float: right;
+    margin: 20px 0 60px;
+    padding: 4px 32px;
+    border: solid 1px var(--aqua);
+    background-color: var(--white);
+    color: var(--aqua);
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#leave-comment input[type='submit']:hover {
+    background-color: var(--aqua);
+    color: var(--white);
+}
 /* Single post style end */
+/* About page style strat */
+.about-page,
+.contact-page {
+    margin-bottom: 60px;
+}
+.about-page .progress-bar {
+    border: solid 1px var(--date-time);
+    background-color: snow;
+    margin-bottom: 20px;
+    height: 30px;
+}
+.about-page .progress-bar p {
+    display: inline-block;
+    color: var(--white);
+    line-height: 30px;
+}
+.about-page .progress-bar p:last-child {
+    float: right;
+}
+.about-page .progress-bar .progres-bar-inner {
+    background-color: dodgerblue;
+    height: 30px;
+}
+.about-page .progress-bar:first-child .progres-bar-inner {
+    background-color: var(--aqua);
+}
+.about-page .progress-bar:last-child .progres-bar-inner {
+    background-color: rgb(76, 156, 130);
+}
+.about-page .progress-bar .progres-bar-inner p:first-child {
+    margin-left: 20px;
+}
+.about-page .progress-bar .progres-bar-inner p:last-child {
+    margin-right: 20px;
+}
+
+/* About page style end */
+
+/* Contact page style start */
+
+.contact-page #leave-comment input[type='submit'] {
+    float: none;
+    margin-bottom: 30px;
+}
+.contact-page #leave-comment input[type='text'],
+.contact-page #leave-comment input[type='email'],
+.contact-page #leave-comment textarea {
+    border: none;
+    background-color: #f4f4f4;
+}
+.contact-page #leave-comment input[type='text'],
+.contact-page #leave-comment input[type='email'] {
+    width: 50%;
+    margin: 4px 0 20px;
+    display: block;
+    padding: 0 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    height: 30px;
+}
+.contact-page #leave-comment .text > div {
+    display: flex;
+    gap: 20px;
+}
+
+/* Contact page style end */
 
 /* Sidebar start */
 .sidebar ul {

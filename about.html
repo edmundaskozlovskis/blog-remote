@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+<body>
+    <div w3-include-html="header.html"></div>
+    <div class="container about-page">
+      <div class="row row-space">
+        <div class="col-1">
+          <article>
+            <img class="head" src="img/blog-post.jpg" alt="About picture">
+            <div class="content">
+                <h5>Sed eleifend nisl in pulvinar congue</h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, eveniet reprehenderit! Aspernatur nam eum sapiente corrupti fugiat, placeat ad hic nesciunt distinctio. Unde ipsum voluptas, sequi expedita in corporis impedit?
+                Quia sequi nisi commodi quo delectus aliquid molestiae autem odit voluptatibus earum? Praesentium repudiandae debitis voluptates ipsa dicta molestias eius voluptatum adipisci placeat expedita sit officia distinctio, odit deleniti ipsum?</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid sit harum minus accusantium iure laborum officia dicta illum temporibus, laboriosam dolores repellat dolor voluptate obcaecati architecto culpa maxime delectus sequi?</p> 
+                <br>
+                <h5>My hobies</h5>
+                <div class="progress-bar-block">
+                    <div class="progress-bar">
+                        <div class="progres-bar-inner" style="width: 90%;">
+                            <p>Traveling</p>
+                            <p>90%</p>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progres-bar-inner" style="width: 95%;">
+                            <p>Photography</p>
+                            <p>95%</p>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progres-bar-inner" style="width: 92%;">
+                            <p>Writing</p>
+                            <p>92%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-2">
+          <div w3-include-html="sidebar.html"></div>
+        </div>
+      </div>
+    </div>
+    <div w3-include-html="footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

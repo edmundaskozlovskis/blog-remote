@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+<body>
+    <div w3-include-html="header.html"></div>
+    <div class="container contact-page">
+      <div class="row row-space">
+        <div class="col-1">
+          <article>
+            <img class="head" src="img/blog-post.jpg" alt="Article picture">
+            <div class="content">
+              <h5>Some information</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, eveniet reprehenderit! Aspernatur nam eum sapiente corrupti fugiat, placeat ad hic nesciunt distinctio. Unde ipsum voluptas, sequi expedita in corporis impedit?
+              Quia sequi nisi commodi quo delectus aliquid molestiae autem odit voluptatibus earum? Praesentium repudiandae debitis voluptates ipsa dicta molestias eius voluptatum adipisci placeat expedita sit officia distinctio, odit deleniti ipsum?</p>
+              <br>
+              <div id="leave-comment">
+                <h5>Leave comment</h5>
+                  <form>
+                      <div class="text">
+                        <div>
+                            <input type="text" name="" id="" placeholder="Name">
+                            <input type="email" name="" id="" placeholder="Email">
+                        </div>
+                        <textarea name="" id="" placeholder="Message" rows="4"></textarea>
+                        <div>
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-2">
+          <div w3-include-html="sidebar.html"></div>
+        </div>
+      </div>
+    </div>
+    <div w3-include-html="footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
