@@ -619,6 +619,10 @@ footer ul {
         left: 50%;
         transform: translateX(-50%);
     }
+    .single-post .col-1 .list-inline-photo {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 10px;
+    }
 }
 @media screen and (max-width: 880px) {
     .mySlides-row {
@@ -631,11 +635,56 @@ footer ul {
     .wraper {
         grid-template-columns: 1fr 1fr;
     } 
+    .single-post .row,
+    .about-page .row,
+    .contact-page .row {
+        flex-direction: column;
+    }
+    .single-post .sidebar .search-group p,
+    .about-page  .sidebar .search-group p,
+    .contact-page .sidebar .search-group p {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 620px) {
     .wraper {
         grid-template-columns: 1fr;
     } 
+    .single-post .col-1 .list-inline-photo {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10px;
+    }
+    .single-post #comments-list img {
+        display: none;
+    }
+    .single-post #comments-list .replay {
+        margin-left: 20px;
+    }
+    .single-post form {
+        position: relative;
+    }
+    .single-post #leave-comment label {
+        position: absolute;
+        right: 0;
+        top: 44px;
+        margin-right: 20px;
+    }
+    .single-post #leave-comment .photo {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .single-post #leave-comment input[type='text'] {
+        width: calc(100% - 70px);
+        height: 50px;
+    }
+    .contact-page #leave-comment .text > div {
+        display: inline;
+    }
+    .contact-page #leave-comment input[type='text'], 
+    .contact-page #leave-comment input[type='email'] {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 480px) {
     .head-title-box {
@@ -684,5 +733,17 @@ footer ul {
         gap: 24px;
         justify-content: center;
         padding: 0;
+    }
+    .single-post .col-1 .content,
+    .about-page  .col-1 .content,
+    .contact-page .col-1 .content {
+        padding: 42px 20px 3px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .single-post .col-1 .list-inline-photo {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        row-gap: 10px;
     }
 }
